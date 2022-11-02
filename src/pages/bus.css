@@ -1,0 +1,46 @@
+.accordion-button {
+    background-color: #E9E9E9 !important;
+}
+
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+td,
+th {
+    /* border: 1px solid #dddddd; */
+    text-align: left;
+    padding: 8px;
+}
+
+/* tr:nth-child(even) {
+    background-color: #dddddd;
+} */
+
+
+.text_rotate {
+    /* transform-origin: 200 200; */
+    margin-left: -80% !important;
+    transform: rotate(270deg);
+}
+
+.text_rotated {
+    /* transform-origin: -50 -50; */
+    transform: rotate(270deg);
+}
+
+@media screen and (max-width: 480px) {
+    .text_rotate {
+        /* transform-origin: 200 200; */
+        /* margin-left: 0% !important; */
+        transform: rotate(0deg);
+    }
+
+    .text_rotated {
+        /* transform-origin: 200 200; */
+        /* margin-right: 100% !important; */
+        transform: rotate(0deg);
+    }
+}

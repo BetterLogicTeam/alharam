@@ -1,23 +1,22 @@
 import logo from './logo.svg';
 import './App.css';
+import Bus from './pages/Bus';
+import FlightsScd from './pages/Flights_Scd';
+import SelectSeatSleeper from './pages/SelectSeatSleeper';
+import SelectSeatSeaterOnly from './pages/SelectSeatSeaterOnly';
+import SelectSeatSeaterAndBerth from './pages/SelectSeatSeaterAndBerth';
+import BusInformation from './pages/BusInformation';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      {/* <Bus /> */}
+      <FlightsScd />
+      {/* <SelectSeatSleeper /> */}
+      {/* <SelectSeatSeaterAndBerth /> */}
+      {/* <SelectSeatSeaterOnly /> */}
+      {/* <BusInformation /> */}
+
     </div>
   );
 }
