@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import ReactFlagsSelect from "react-flags-select";
+import './bus_info.css'
 import sunset from './assets/Sunset.png'
 import sun from './assets/Sun.png'
 import evening from './assets/Moon and Stars.png'
@@ -21,7 +22,9 @@ import ReactCountryFlag from "react-country-flag"
 const BusInformation = () => {
     const [selected, setSelected] = useState("");
     return <div>
-        <div className="container my-5">
+        <div className="text-center text-white fw-bold py-lg-4 py-3 fs-3  text-capitalize" style={{ background: '#02A3C1' }}> booking summary</div>
+        <div className="container py-3 py-lg-5">
+
             <h1 className="text-center text-capitalize" >
                 Bus information
             </h1>
@@ -124,30 +127,40 @@ const BusInformation = () => {
                         </div>
                     </div>
                 </div>
-                <div className="mt-5 text-center">
-                    <h1 className=" text-capitalize">contact detail</h1>
-                    <p className="text-muted"> Your Mobile number will be used only for sending flight related communication</p>
+                <div className="mt-5">
+                    <h1 className=" text-capitalize text-center">contact detail</h1>
+                    <p className="text-muted text-center"> Your Mobile number will be used only for sending flight related communication</p>
+                    <div className="">
+                        <form className="col-lg-6 mx-auto ">
+                            <div className=" d-flex mb-3 ">
 
-                    <form className="col-lg-6 mx-auto">
-                        <div class="input-group mb-3">
-                            {/* <ReactCountryFlag
-                                countryCode="US"
-                                svg
-                                cdnUrl="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.4.3/flags/1x1/"
-                                cdnSuffix="svg"
-                                title="US"
-                            /> */}
-                            {/* <ReactFlagsSelect
-                                countries={["US", "GB", "FR", "DE", "IT"]}
-                                customLabels={{ US: "EN-US", GB: "EN-GB", FR: "FR", DE: "DE", IT: "IT" }}
-                                placeholder="Select Language"
-                                showSecondarySelectedLabel={true}
-                                selected={selected}
-                                onSelect={(code) => setSelected(code)}
-                            /> */}
-                            <input type="text" class="form-control rounded-0 p-0" aria-label="Text input with dropdown button" />
-                        </div>
-                    </form>
+                                <ReactFlagsSelect
+
+                                    countries={["PK", "GB", "FR", "IN", 'BD', 'AF']}
+                                    customLabels={{
+                                        "PK": { secondary: "+92" },
+                                        "GB": { secondary: "+44" },
+                                        "FR": { secondary: "+44" },
+                                        "IN": { secondary: "+91" },
+                                        "BD": { secondary: "+93" },
+                                        "AF": { secondary: "+91" },
+
+                                    }}
+                                    placeholder="Select country"
+                                    // className="form-control rounded-0 "
+                                    showSecondarySelectedLabel={true}
+                                    selected={selected}
+                                    onSelect={(code) => setSelected(code)}
+
+                                />
+
+
+                                <input type="number" id="lastname" placeholder="Enter number" className="form-control rounded-0 " style={{ height: "2.8rem" }} />
+
+
+                            </div>
+                        </form>
+                    </div>
                 </div>
             </div>
 

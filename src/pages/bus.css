@@ -8,6 +8,11 @@ table {
     width: 100%;
 }
 
+.fstable {
+    font-size: '15px';
+    font-Weight: "300"
+}
+
 td,
 th {
     /* border: 1px solid #dddddd; */
@@ -31,11 +36,22 @@ th {
     transform: rotate(270deg);
 }
 
-@media screen and (max-width: 480px) {
+.text_size {
+    font-size: "32px";
+    font-weight: 400;
+
+}
+
+@media (min-width: 320px) and (max-width: 666px) {
     .text_rotate {
         /* transform-origin: 200 200; */
         /* margin-left: 0% !important; */
         transform: rotate(0deg);
+    }
+
+    .fstable {
+        font-size: 10px !important;
+        font-Weight: 300
     }
 
     .text_rotated {
@@ -43,4 +59,10 @@ th {
         /* margin-right: 100% !important; */
         transform: rotate(0deg);
     }
+
+    /* .text_size {
+        font-size: "20px" !important;
+        font-weight: 400 !important;
+
+    } */
 }

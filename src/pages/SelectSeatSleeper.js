@@ -5,10 +5,10 @@ import vertical_bar from './assets/vertical_bar.png'
 import './bus.css'
 
 const SelectSeatSleeper = () => {
-    return <div className="container pt-3">
-        <div className="row mt-5">
-            <div className="col-lg-9">
-                <div className="py-5 " >
+    return <div className="container">
+        <div className="row my-3 my-lg-5">
+            <div className="col-lg-9 my-3 my-lg-0">
+                <div className=" " >
                     <h6 className="text-uppercase" style={{ fontWeight: "500", fontSize: "32px" }}>banglore-----ahmedabad</h6>
                     <div className="row">
                         <div className="col-lg-6">
@@ -25,7 +25,7 @@ const SelectSeatSleeper = () => {
 
 
                     </div>
-                    <div className="row">
+                    <div className="row my-3">
                         <div className="col-lg-3">
                             <img className="img-fluid" src={select_seat}></img>
 

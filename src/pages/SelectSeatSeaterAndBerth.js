@@ -7,8 +7,8 @@ import lower_berth_seat from './assets/lower_berth_seat.png'
 import './bus.css'
 
 const SelectSeatSeaterAndBerth = () => {
-    return <div className="container pt-3">
-        <div className="row mt-5">
+    return <div className="container ">
+        <div className="row my-lg-5 my-3">
             <div className="col-lg-9 mb-3 my-lg-0">
                 <div className="pb-5 " >
                     <h6 className="text-uppercase" style={{ fontWeight: "500", fontSize: "32px" }}>banglore-----ahmedabad</h6>

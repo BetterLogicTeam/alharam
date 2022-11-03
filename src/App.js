@@ -6,15 +6,24 @@ import SelectSeatSleeper from './pages/SelectSeatSleeper';
 import SelectSeatSeaterOnly from './pages/SelectSeatSeaterOnly';
 import SelectSeatSeaterAndBerth from './pages/SelectSeatSeaterAndBerth';
 import BusInformation from './pages/BusInformation';
-
+import { Routes, Route, Link } from "react-router-dom";
 function App() {
   return (
     <div className="App">
+
+
+      <Routes>
+        <Route path="/" element={<FlightsScd />} />
+        <Route path="SelectSeatSleeper" element={<SelectSeatSleeper />} />
+        <Route path="SelectSeatSeaterAndBerth" element={<SelectSeatSeaterAndBerth />} />
+        <Route path="SelectSeatSeaterOnly" element={<SelectSeatSeaterOnly />} />
+
+      </Routes>
+
+
       {/* <Bus /> */}
-      <FlightsScd />
-      {/* <SelectSeatSleeper /> */}
-      {/* <SelectSeatSeaterAndBerth /> */}
-      {/* <SelectSeatSeaterOnly /> */}
+
+
       {/* <BusInformation /> */}
 
     </div>

@@ -19,6 +19,11 @@ import group from './assets/Group.png'
 import Tracking_delivery from './assets/Tracking delivery.png'
 import unplug from './assets/unplug.png'
 import seat from './assets/seat.png'
+import less from './assets/less.png'
+import greater from './assets/greater.png'
+
+
+import { Link } from "react-router-dom";
 
 
 
@@ -38,12 +43,20 @@ const FlightsScd = () => {
     const show = () => {
         //  setShows(!shows)
     }
-    return <div className="container">
+    return <div className="px-3">
         {/* browse by operator */}
         <section className="py-5" style={{ backfgroundColor: "#F5F5F5" }}>
-            <h6 style={{ fontSize: "36px", fontWeight: "400" }}> Bangalore - Ahmedabad | Thursday, 01 September 2022</h6>
+            <div className="row">
+                <div className="col-lg-8">
+                    <h6 className="fw-lg-bold fs-2"> Bangalore - Ahmedabad | Thursday, 01 September 2022</h6>
+                </div>
 
-            <div className="row g-0">
+                <div className="col-lg-4  text-center text-lg-end">
+                    <div className="" style={{ fontSize: "20px" }}>  <img src={less} alt='' className="me-2" />pervious day | next day  <img src={greater} alt='' className="ms-2" /></div>
+
+                </div>
+            </div>
+            <div className="row g-0 text-uppercase mt-2 mt-lg-0">
                 <div className="col-lg-3 py-5" style={{ backgroundColor: '#E9E9E9' }}>
                     <div className="px-3">
                         <h3 className="text-center text-uppercase">filter by</h3>
@@ -210,31 +223,31 @@ const FlightsScd = () => {
                             <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
                                 <div class="accordion-body">
                                     <form action="" className="mt-3">
-                                    <div className="form-check">
-                                        <input className="form-check-input" type="checkbox" value="" id="anand rao circle" />
-                                        <label className="form-check-label text-capitalize" for="anand rao circle">
-                                            anand rao circle
-                                        </label>
-                                    </div>
-                                    <div className="form-check">
-                                        <input className="form-check-input" type="checkbox" value="" id="8th mile bus stop" />
-                                        <label className="form-check-label text-capitalize" for="8th mile bus stop">
-                                            8th mile bus stop
-                                        </label>
-                                    </div>
-                                    <div className="form-check">
-                                        <input className="form-check-input" type="checkbox" value="" id="anand rao circle" />
-                                        <label className="form-check-label text-capitalize" for="anand rao circle">
-                                            anand rao circle
-                                        </label>
-                                    </div>
-                                    <div className="form-check">
-                                        <input className="form-check-input" type="checkbox" value="" id="new delhi gate no 5" />
-                                        <label className="form-check-label text-capitalize" for="new delhi gate no 5">
-                                            new delhi gate no 5
-                                        </label>
-                                    </div>
-                                </form></div>
+                                        <div className="form-check">
+                                            <input className="form-check-input" type="checkbox" value="" id="anand rao circle" />
+                                            <label className="form-check-label text-capitalize" for="anand rao circle">
+                                                anand rao circle
+                                            </label>
+                                        </div>
+                                        <div className="form-check">
+                                            <input className="form-check-input" type="checkbox" value="" id="8th mile bus stop" />
+                                            <label className="form-check-label text-capitalize" for="8th mile bus stop">
+                                                8th mile bus stop
+                                            </label>
+                                        </div>
+                                        <div className="form-check">
+                                            <input className="form-check-input" type="checkbox" value="" id="anand rao circle" />
+                                            <label className="form-check-label text-capitalize" for="anand rao circle">
+                                                anand rao circle
+                                            </label>
+                                        </div>
+                                        <div className="form-check">
+                                            <input className="form-check-input" type="checkbox" value="" id="new delhi gate no 5" />
+                                            <label className="form-check-label text-capitalize" for="new delhi gate no 5">
+                                                new delhi gate no 5
+                                            </label>
+                                        </div>
+                                    </form></div>
                             </div>
                         </div>
                         <div class="accordion-item border-0">
@@ -402,9 +415,9 @@ const FlightsScd = () => {
                 <div className="col-lg-9 ps-lg-3">
 
                     <div className="table-responsive">
-                        <table class="table ">
+                        <table class="table mt-3 mt-lg-0">
                             <thead style={{ backgroundColor: '#02A3C1' }}>
-                                <tr className="text-white   ">
+                                <tr className="text-white text-uppercase">
                                     <th scope="col">Bus Operator</th>
                                     <th scope="col">Departure</th>
                                     <th scope="col">Duration</th>
@@ -426,14 +439,14 @@ const FlightsScd = () => {
                                                     m r travels
 
                                                 </h6>
-                                                    <p className="" style={{ fontSize: '15px', fontWeight: "300", color: "#2D2D2D" }}>VOLVO AC Multi Axle Seater/Sleeper (2 + 1) </p>
+                                                    <p className="fstable" style={{ color: "#2D2D2D" }}>VOLVO AC Multi Axle Seater/Sleeper (2 + 1) </p>
                                                 </div></td>
                                             </td>
-                                            <td><div><h6 style={{ fontSize: "32px", fontWeight: "500" }}>
+                                            <td><div><h5 className="fw-bold" >
                                                 21:40
 
-                                            </h6>
-                                                <p className="text-uppercase" style={{ fontSize: "24px", fontWeight: "400" }}>delhi</p>
+                                            </h5>
+                                                <p className="text-uppercase" style={{ fontSize: "15px", fontWeight: "400" }}>delhi</p>
                                             </div></td>
                                             <td className=""><div><p className="mb-0" style={{ fontSize: '10px', fontWeight: '400' }}>
                                                 21H:40M
@@ -449,18 +462,18 @@ const FlightsScd = () => {
                                                 <p style={{ fontSize: '10px', fontWeight: '400' }}>NON STOP</p>
                                             </div></td>
                                             <td><div>
-                                                <h6 className="" style={{ fontSize: "32px", fontWeight: "500" }}>
-                                                    23:55</h6>
-                                                <h6 className="text-uppercase" style={{ fontSize: "24px", fontWeight: "400" }}>
+                                                <h5 className="fw-bold">
+                                                    23:55</h5>
+                                                <h6 className="text-uppercase" style={{ fontSize: "15px", fontWeight: "400" }}>
                                                     mecca
                                                 </h6>
                                             </div></td>
                                             <td><div>
                                                 <p className="" style={{ fontSize: '13px', fontWeight: '300' }}>
                                                     Starting From</p>
-                                                <h6 className="text-uppercase" style={{ fontSize: "32px", fontWeight: "500" }}>
-                                                    rs 1,995/-
-                                                </h6>
+                                                <h5 className="fw-bold">
+                                                    Rs 1,995/-
+                                                </h5>
                                             </div></td>
 
 
@@ -479,25 +492,20 @@ const FlightsScd = () => {
                                                 <span className="" style={{ fontWeight: "400", fontSize: "16px" }}>21 seats left</span>
 
                                             </td>
-                                            <td><button onClick={show} className=" px-3 border-0" style={{ backgroundColor: "#02A3C1", color: "white" }}>Select Seat</button></td>
+                                            <td><div class="dropdown">
+                                                <button class="btn rounded-0 px-3" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false" style={{ backgroundColor: "#02A3C1", color: "white" }}>
+                                                    Select seat
+                                                </button>
+                                                <ul class="dropdown-menu rounded-0" aria-labelledby="dropdownMenuButton1">
+                                                    <li><Link to="/SelectSeatSleeper" class="dropdown-item" >SelectSeatSleeper</Link></li>
+                                                    <li><Link to="/SelectSeatSeaterAndBerth" class="dropdown-item">SelectSeatSeaterAndBerth</Link></li>
+                                                    <li><Link to="/SelectSeatSeaterOnly" class="dropdown-item">SelectSeatSeaterOnly</Link></li>
+
+                                                </ul>
+                                            </div></td>
                                         </tr>
                                         <div className="mb-3">
-                                            {/* {shows && <> <ul class="nav nav-tabs" id="myTab" role="tablist">
-                                                <li class="nav-item" role="presentation">
-                                                    <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home" type="button" role="tab" aria-controls="home" aria-selected="true">Home</button>
-                                                </li>
-                                                <li class="nav-item" role="presentation">
-                                                    <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile" type="button" role="tab" aria-controls="profile" aria-selected="false">Profile</button>
-                                                </li>
-                                                <li class="nav-item" role="presentation">
-                                                    <button class="nav-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#contact" type="button" role="tab" aria-controls="contact" aria-selected="false">Contact</button>
-                                                </li>
-                                            </ul>
-                                                <div class="tab-content" id="myTabContent">
-                                                    <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">...</div>
-                                                    <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">...</div>
-                                                    <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">...</div>
-                                                </div></>} */}
+
                                         </div>
                                     </>
                                     )
@@ -505,6 +513,10 @@ const FlightsScd = () => {
 
                             </tbody>
                         </table>
+                    </div>
+                    <div className="text-center">
+                        <button className="px-5 py-2 border-0 fw-bold fs-4 text-white" style={{ backgroundColor: '#02A3C1' }}>Show More</button>
+
                     </div>
 
                 </div>
